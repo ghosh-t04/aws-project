@@ -5,9 +5,9 @@ const mockQuizResponse: QuizResponse = {
   id: 'mock-quiz-1',
   userId: 'mock-user-1',
   answers: [
-    { questionId: 'q1', answer: 'A' },
-    { questionId: 'q2', answer: 'B' },
-    { questionId: 'q3', answer: 'C' }
+    { questionId: 'q1', answer: 'A', category: 'finance' },
+    { questionId: 'q2', answer: 'B', category: 'finance' },
+    { questionId: 'q3', answer: 'C', category: 'finance' }
   ],
   analysis: 'Based on your responses, you show strong financial awareness and good spending habits. You tend to be cautious with money and prefer to save rather than spend impulsively. This is a great foundation for building wealth over time.',
   createdAt: new Date().toISOString()

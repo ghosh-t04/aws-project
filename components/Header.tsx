@@ -1,6 +1,6 @@
 'use client'
 
-import { User } from '@aws-amplify/ui-react'
+import { AuthUser } from 'aws-amplify/auth'
 import { 
   ChartBarIcon, 
   UserCircleIcon, 
@@ -10,7 +10,7 @@ import {
 import { useState } from 'react'
 
 interface HeaderProps {
-  user: User
+  user: AuthUser
   onSignOut: () => void
 }
 
@@ -41,7 +41,7 @@ export function Header({ user, onSignOut }: HeaderProps) {
               <UserCircleIcon className="w-8 h-8 text-gray-400" />
               <div className="text-left">
                 <p className="text-sm font-medium text-gray-900">
-                  {user.signInDetails?.loginId || 'User'}
+                  {user.username || 'User'}
                 </p>
                 <p className="text-xs text-gray-500">Finance Tracker</p>
               </div>

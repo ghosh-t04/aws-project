@@ -350,7 +350,10 @@ function SpendingEntryModal({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (formData.description && formData.amount > 0) {
-      onSave(formData)
+      onSave({
+        ...formData,
+        date: new Date().toISOString(),
+})
     }
   }
 

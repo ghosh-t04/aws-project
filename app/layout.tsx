@@ -4,7 +4,12 @@ import './globals.css'
 import { AmplifyProvider } from '@/lib/amplify-config'
 import { Toaster } from 'react-hot-toast'
 
-const inter = Inter({ subsets: ['latin'] })
+// ✅ Self-host Inter font locally (no network fetch needed)
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap', // avoids layout shift and network fetch dependency
+  fallback: ['system-ui', 'Arial', 'sans-serif'], // ensures graceful fallback
+})
 
 export const metadata: Metadata = {
   title: 'MindMoney - AI-Powered Finance Tracker',
@@ -20,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <body>
         <AmplifyProvider>
           {children}
-          <Toaster 
+          <Toaster
             position="top-right"
             toastOptions={{
               duration: 4000,

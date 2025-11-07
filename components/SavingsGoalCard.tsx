@@ -3,8 +3,8 @@
 import { SavingsGoal } from '@/types'
 import { 
   CurrencyDollarIcon, 
-  TargetIcon, 
-  TrendingUpIcon,
+  FlagIcon,
+  ArrowTrendingUpIcon, 
   PencilIcon
 } from '@heroicons/react/24/outline'
 
@@ -43,7 +43,7 @@ export function SavingsGoalCard({ goal, onEdit }: SavingsGoalCardProps) {
 
         <div className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-success-100 rounded-lg mx-auto mb-2">
-            <TargetIcon className="w-6 h-6 text-success-600" />
+            <FlagIcon className="w-6 h-6 text-success-600" />
           </div>
           <p className="text-sm text-gray-600">Savings Goal</p>
           <p className="text-xl font-bold text-success-600">
@@ -56,7 +56,7 @@ export function SavingsGoalCard({ goal, onEdit }: SavingsGoalCardProps) {
 
         <div className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-2">
-            <TrendingUpIcon className="w-6 h-6 text-blue-600" />
+            <ArrowTrendingUpIcon className="w-6 h-6 text-blue-600" />
           </div>
           <p className="text-sm text-gray-600">Daily Budget</p>
           <p className="text-xl font-bold text-blue-600">
