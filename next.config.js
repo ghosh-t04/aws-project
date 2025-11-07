@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Removed deprecated experimental.appDir option (app dir is stable in modern Next)
   images: {
     domains: ['localhost'],
   },
@@ -14,6 +12,6 @@ const nextConfig = {
     API_GATEWAY_URL: process.env.API_GATEWAY_URL,
     OLLAMA_API_URL: process.env.OLLAMA_API_URL,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
